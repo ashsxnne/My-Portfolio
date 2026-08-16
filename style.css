@@ -1,0 +1,1514 @@
+/* ================================
+   DENISE KETHLEY CAÑA
+   WS301 PERSONAL PORTFOLIO
+   ================================ */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #f9e9ee;
+    color: #63334b;
+    font-family: "DM Sans", sans-serif;
+    overflow-x: hidden;
+}
+
+
+/* ================================
+   NAVIGATION
+   ================================ */
+
+.navbar {
+    width: 100%;
+    height: 80px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 0 8%;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    z-index: 10;
+}
+
+.logo {
+    font-family: "Caveat", cursive;
+    font-size: 38px;
+    font-weight: 700;
+    color: #9b4169;
+}
+
+.logo span {
+    color: #d46b91;
+}
+
+.nav-links {
+    display: flex;
+    gap: 35px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #75435a;
+    font-size: 14px;
+    font-weight: 500;
+
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    color: #b54470;
+}
+
+
+/* ================================
+   HERO SECTION
+   ================================ */
+
+.hero {
+    min-height: 100vh;
+
+    display: flex;
+    align-items: center;
+
+    padding: 120px 8% 80px;
+
+    position: relative;
+
+    background:
+        radial-gradient(
+            circle at 15% 20%,
+            rgba(255, 255, 255, 0.7),
+            transparent 25%
+        ),
+        radial-gradient(
+            circle at 85% 75%,
+            rgba(215, 133, 160, 0.18),
+            transparent 30%
+        ),
+        #f9e9ee;
+}
+
+
+/* subtle paper effect */
+
+.hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+
+    opacity: 0.18;
+
+    background-image:
+        repeating-linear-gradient(
+            0deg,
+            transparent,
+            transparent 4px,
+            rgba(130, 60, 90, 0.04) 5px
+        );
+
+    pointer-events: none;
+}
+
+
+/* ================================
+   HERO CONTENT
+   ================================ */
+
+.hero-content {
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 80px;
+
+    position: relative;
+    z-index: 2;
+}
+
+.intro-text {
+    max-width: 600px;
+}
+
+.small-heading {
+    font-size: 13px;
+    letter-spacing: 3px;
+    color: #ad5578;
+
+    margin-bottom: 15px;
+}
+
+h1 {
+    font-family: "Caveat", cursive;
+
+    font-size: clamp(70px, 9vw, 125px);
+    line-height: 0.78;
+
+    font-weight: 600;
+
+    color: #743650;
+
+    margin-bottom: 35px;
+}
+
+h1 span {
+    color: #ae4770;
+    font-size: 0.78em;
+}
+
+.intro {
+    max-width: 510px;
+
+    font-size: 17px;
+    line-height: 1.8;
+
+    color: #71485b;
+
+    margin-bottom: 22px;
+}
+
+.details {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+
+    font-size: 13px;
+
+    color: #9b637a;
+
+    margin-bottom: 32px;
+}
+
+
+/* ================================
+   BUTTON
+   ================================ */
+
+.explore-btn {
+    display: inline-block;
+
+    text-decoration: none;
+
+    background: #a94d70;
+    color: white;
+
+    padding: 14px 25px;
+
+    border-radius: 30px;
+
+    font-size: 14px;
+
+    box-shadow:
+        0 10px 25px rgba(130, 50, 85, 0.18);
+
+    transition: 0.3s;
+}
+
+.explore-btn:hover {
+    transform: translateY(-4px);
+
+    background: #8f3d5e;
+
+    box-shadow:
+        0 15px 30px rgba(130, 50, 85, 0.25);
+}
+
+
+/* ================================
+   PROFILE PHOTO
+   ================================ */
+
+.profile-area {
+    position: relative;
+
+    width: 330px;
+
+    display: flex;
+    justify-content: center;
+}
+
+.photo-frame {
+    width: 300px;
+    padding: 13px 13px 45px;
+
+    background: #fffafa;
+
+    transform: rotate(3deg);
+
+    box-shadow:
+        0 20px 45px rgba(100, 45, 70, 0.16);
+
+    position: relative;
+}
+
+.photo-frame img {
+    width: 100%;
+    height: 340px;
+
+    object-fit: cover;
+
+    display: block;
+
+    background: #ead0d9;
+}
+
+.photo-caption {
+    position: absolute;
+
+    bottom: 9px;
+    left: 0;
+    right: 0;
+
+    text-align: center;
+
+    font-family: "Caveat", cursive;
+
+    font-size: 25px;
+
+    color: #914364;
+}
+
+
+/* tape decoration */
+
+.tape {
+    position: absolute;
+
+    width: 100px;
+    height: 30px;
+
+    background: rgba(221, 176, 188, 0.65);
+
+    top: -15px;
+    left: 115px;
+
+    transform: rotate(-5deg);
+
+    z-index: 3;
+}
+
+
+/* handwritten note */
+
+.photo-note {
+    position: absolute;
+
+    right: -45px;
+    bottom: -40px;
+
+    font-family: "Caveat", cursive;
+
+    font-size: 24px;
+
+    line-height: 1;
+
+    color: #a94d70;
+
+    transform: rotate(-8deg);
+}
+
+
+/* ================================
+   DECORATIONS
+   ================================ */
+
+.heart,
+.star {
+    position: absolute;
+
+    font-family: "Caveat", cursive;
+
+    color: rgba(168, 65, 105, 0.55);
+
+    z-index: 1;
+}
+
+.heart {
+    font-size: 45px;
+}
+
+.heart-one {
+    top: 28%;
+    left: 4%;
+    transform: rotate(-15deg);
+}
+
+.heart-two {
+    right: 5%;
+    top: 18%;
+    transform: rotate(15deg);
+}
+
+.star {
+    font-size: 30px;
+}
+
+.star-one {
+    left: 42%;
+    top: 15%;
+}
+
+.star-two {
+    right: 40%;
+    bottom: 12%;
+}
+
+
+/* ================================
+   ABOUT SECTION
+   ================================ */
+
+.about-section {
+    min-height: 80vh;
+
+    padding: 120px 15%;
+
+    background: #fff8fa;
+
+    text-align: center;
+}
+
+.section-label {
+    font-size: 12px;
+    letter-spacing: 4px;
+
+    color: #ae5578;
+
+    margin-bottom: 25px;
+}
+
+.about-section h2 {
+    font-family: "Caveat", cursive;
+
+    font-size: clamp(50px, 6vw, 80px);
+
+    line-height: 0.9;
+
+    color: #71344e;
+
+    margin-bottom: 35px;
+}
+
+.about-text {
+    max-width: 720px;
+
+    margin: 0 auto 20px;
+
+    color: #765466;
+
+    font-size: 16px;
+
+    line-height: 1.9;
+}
+
+.about-text strong {
+    color: #a44268;
+}
+
+
+/* ================================
+   MOTTO SECTION
+   ================================ */
+
+.motto-section {
+    min-height: 70vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 100px 8%;
+
+    background: #eed3dc;
+}
+
+.motto-card {
+    max-width: 800px;
+
+    padding: 70px 80px;
+
+    background: #fff7f9;
+
+    text-align: center;
+
+    position: relative;
+
+    box-shadow:
+        0 25px 60px rgba(100, 45, 70, 0.12);
+}
+
+.quote-mark {
+    position: absolute;
+
+    top: 15px;
+    left: 30px;
+
+    font-family: "Caveat", cursive;
+
+    font-size: 90px;
+
+    color: #d88ca7;
+}
+
+.motto-label {
+    letter-spacing: 4px;
+
+    font-size: 11px;
+
+    color: #a45a77;
+
+    margin-bottom: 15px;
+}
+
+.motto-card h2 {
+    font-family: "Caveat", cursive;
+
+    font-size: clamp(55px, 7vw, 90px);
+
+    color: #8f3c60;
+
+    margin-bottom: 15px;
+}
+
+.motto-card > p:not(.motto-label) {
+    max-width: 500px;
+
+    margin: auto;
+
+    line-height: 1.8;
+
+    color: #765466;
+}
+
+.signature {
+    display: block;
+
+    margin-top: 25px;
+
+    font-family: "Caveat", cursive;
+
+    font-size: 25px;
+
+    color: #a94469;
+}
+
+
+/* ================================
+   FOOTER
+   ================================ */
+
+footer {
+    padding: 30px 8%;
+
+    display: flex;
+    justify-content: space-between;
+
+    background: #663047;
+
+    color: #f8dfe7;
+
+    font-size: 12px;
+}
+
+footer span {
+    opacity: 0.7;
+}
+
+
+/* ================================
+   RESPONSIVE DESIGN
+   ================================ */
+
+@media (max-width: 800px) {
+
+    .navbar {
+        padding: 0 6%;
+    }
+
+    .nav-links {
+        gap: 15px;
+    }
+
+    .nav-links a {
+        font-size: 12px;
+    }
+
+    .hero {
+        padding: 120px 7% 80px;
+    }
+
+    .hero-content {
+        flex-direction: column;
+
+        text-align: center;
+
+        gap: 70px;
+    }
+
+    .intro {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .details {
+        justify-content: center;
+    }
+
+    .profile-area {
+        margin-bottom: 30px;
+    }
+
+    .photo-note {
+        right: -10px;
+    }
+
+    .about-section {
+        padding: 90px 8%;
+    }
+
+    .motto-card {
+        padding: 60px 25px;
+    }
+
+    footer {
+        flex-direction: column;
+        text-align: center;
+        gap: 10px;
+    }
+}
+
+
+@media (max-width: 500px) {
+
+    .nav-links {
+        display: none;
+    }
+
+    h1 {
+        font-size: 75px;
+    }
+
+    .profile-area {
+        transform: scale(0.9);
+    }
+
+    .about-section h2 {
+        font-size: 55px;
+    }
+
+    .motto-card h2 {
+        font-size: 55px;
+    }
+}
+
+/* =========================================
+   PAGE 2 & PAGE 3
+   SKILLS / HOBBIES STYLES
+   ========================================= */
+
+
+/* PAGE HEADER */
+
+.page-header {
+    min-height: 75vh;
+
+    padding: 150px 8% 80px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+
+    background:
+        radial-gradient(
+            circle at 15% 25%,
+            rgba(255,255,255,.75),
+            transparent 25%
+        ),
+        radial-gradient(
+            circle at 85% 75%,
+            rgba(211,123,153,.15),
+            transparent 30%
+        ),
+        #f9e9ee;
+
+    position: relative;
+}
+
+.page-header h1 {
+    font-size: clamp(65px, 8vw, 105px);
+
+    line-height: .8;
+
+    margin-bottom: 30px;
+}
+
+.page-header h1 span {
+    color: #ae4770;
+}
+
+.header-description {
+    max-width: 550px;
+
+    line-height: 1.8;
+
+    color: #795467;
+
+    font-size: 16px;
+}
+
+
+/* FLOATING DECORATIONS */
+
+.floating-heart,
+.floating-star {
+    position: absolute;
+
+    font-family: "Caveat", cursive;
+
+    color: rgba(168,65,105,.45);
+
+    z-index: 1;
+}
+
+.floating-heart {
+    font-size: 45px;
+}
+
+.floating-star {
+    font-size: 30px;
+}
+
+.floating-heart.heart-one {
+    left: 5%;
+    top: 35%;
+}
+
+.floating-heart.heart-two {
+    right: 6%;
+    top: 20%;
+}
+
+.floating-star.star-one {
+    left: 25%;
+    top: 15%;
+}
+
+.floating-star.star-two {
+    right: 25%;
+    bottom: 15%;
+}
+
+
+/* ACTIVE NAVIGATION */
+
+.nav-links a.active {
+    color: #ae4770;
+
+    font-weight: 600;
+}
+
+
+/* =========================================
+   PAGE 2 CARDS
+   ========================================= */
+
+.cards-container {
+
+    padding: 50px 8% 120px;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 30px;
+
+    background: #f9e9ee;
+}
+
+
+/* CARD */
+
+.skill-card {
+
+    min-height: 450px;
+
+    padding: 45px 35px;
+
+    background: #fff8fa;
+
+    position: relative;
+
+    overflow: hidden;
+
+    box-shadow:
+        0 20px 45px rgba(100,45,70,.10);
+
+    transition: .35s ease;
+}
+
+.skill-card:nth-child(1) {
+    transform: rotate(-1.5deg);
+}
+
+.skill-card:nth-child(2) {
+    transform: rotate(1.5deg);
+}
+
+.skill-card:nth-child(3) {
+    transform: rotate(-1deg);
+}
+
+.skill-card:hover {
+    transform:
+        translateY(-10px)
+        rotate(0deg);
+
+    box-shadow:
+        0 30px 60px rgba(100,45,70,.16);
+}
+
+
+/* CARD NUMBER */
+
+.card-number {
+
+    position: absolute;
+
+    top: 20px;
+    right: 25px;
+
+    font-family: "Caveat", cursive;
+
+    font-size: 30px;
+
+    color: #d28aa4;
+}
+
+
+/* CARD ICON */
+
+.card-icon {
+
+    width: 65px;
+    height: 65px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: #f2d4df;
+
+    color: #a44168;
+
+    font-family: "Caveat", cursive;
+
+    font-size: 30px;
+
+    margin-bottom: 25px;
+}
+
+
+/* LABEL */
+
+.card-label {
+
+    font-size: 10px;
+
+    letter-spacing: 3px;
+
+    color: #aa5a79;
+
+    margin-bottom: 10px;
+}
+
+
+/* CARD TITLE */
+
+.skill-card h2 {
+
+    font-family: "Caveat", cursive;
+
+    font-size: 55px;
+
+    line-height: .9;
+
+    color: #743650;
+
+    margin-bottom: 25px;
+}
+
+
+/* DESCRIPTION */
+
+.card-description {
+
+    color: #795467;
+
+    line-height: 1.8;
+
+    font-size: 14px;
+}
+
+
+/* DECORATION */
+
+.doodle {
+
+    position: absolute;
+
+    bottom: 25px;
+    right: 30px;
+
+    font-family: "Caveat", cursive;
+
+    font-size: 28px;
+
+    color: #c16c8c;
+}
+
+
+/* MINI NOTE */
+
+.mini-note {
+
+    position: absolute;
+
+    bottom: 25px;
+    left: 35px;
+
+    font-family: "Caveat", cursive;
+
+    font-size: 24px;
+
+    color: #a94469;
+
+    transform: rotate(-5deg);
+}
+
+
+/* =========================================
+   YOUTUBE LINK
+   ========================================= */
+
+.social-link {
+
+    display: inline-block;
+
+    margin-top: 25px;
+
+    padding: 12px 23px;
+
+    border-radius: 30px;
+
+    text-decoration: none;
+
+    background: #a94d70;
+
+    color: white;
+
+    font-size: 13px;
+
+    transition: .3s;
+}
+
+.social-link:hover {
+
+    background: #873654;
+
+    transform: translateY(-3px);
+}
+
+
+/* =========================================
+   SOCIAL SECTION
+   ========================================= */
+
+.social-section {
+
+    padding: 100px 8%;
+
+    text-align: center;
+
+    background: #fff8fa;
+}
+
+.section-label {
+
+    font-size: 11px;
+
+    letter-spacing: 4px;
+
+    color: #aa5577;
+
+    margin-bottom: 20px;
+}
+
+.social-section h2 {
+
+    font-family: "Caveat", cursive;
+
+    font-size: 65px;
+
+    line-height: .9;
+
+    color: #743650;
+
+    margin-bottom: 35px;
+}
+
+.social-links {
+
+    display: flex;
+
+    justify-content: center;
+
+    gap: 15px;
+}
+
+.social-links a {
+
+    text-decoration: none;
+
+    color: #fff;
+
+    background: #a94d70;
+
+    padding: 13px 25px;
+
+    border-radius: 30px;
+
+    font-size: 13px;
+
+    transition: .3s;
+}
+
+.social-links a:hover {
+
+    background: #833451;
+
+    transform: translateY(-3px);
+}
+
+.social-links span {
+
+    margin-right: 8px;
+}
+
+
+/* =========================================
+   NEXT PAGE
+   ========================================= */
+
+.next-page {
+
+    padding: 70px 8%;
+
+    background: #eed3dc;
+
+    text-align: center;
+}
+
+.next-page p {
+
+    color: #815267;
+
+    margin-bottom: 10px;
+}
+
+.next-page a {
+
+    font-family: "Caveat", cursive;
+
+    font-size: 35px;
+
+    color: #953c61;
+
+    text-decoration: none;
+}
+
+.next-page a:hover {
+
+    color: #c1577d;
+}
+
+
+/* =========================================
+   PAGE 3
+   ========================================= */
+
+.hobby-intro {
+
+    padding: 40px 8% 120px;
+
+    background: #f9e9ee;
+
+    display: grid;
+
+    grid-template-columns: 1.2fr .8fr;
+
+    gap: 35px;
+}
+
+
+/* HOBBY CARD */
+
+.hobby-card,
+.genre-card {
+
+    background: #fff8fa;
+
+    padding: 55px;
+
+    position: relative;
+
+    box-shadow:
+        0 20px 45px rgba(100,45,70,.10);
+}
+
+.hobby-card {
+
+    transform: rotate(-1deg);
+}
+
+.genre-card {
+
+    transform: rotate(1deg);
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+}
+
+.hobby-number {
+
+    position: absolute;
+
+    top: 20px;
+    right: 30px;
+
+    font-family: "Caveat", cursive;
+
+    font-size: 30px;
+
+    color: #d28aa4;
+}
+
+.film-icon {
+
+    font-size: 45px;
+
+    margin-bottom: 20px;
+}
+
+.hobby-card h2,
+.genre-card h2 {
+
+    font-family: "Caveat", cursive;
+
+    font-size: 60px;
+
+    line-height: .85;
+
+    color: #743650;
+
+    margin-bottom: 25px;
+}
+
+.hobby-card p:not(.card-label) {
+
+    max-width: 650px;
+
+    color: #795467;
+
+    font-size: 14px;
+
+    line-height: 1.9;
+
+    margin-bottom: 15px;
+}
+
+
+/* GENRES */
+
+.genres {
+
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 12px;
+
+    margin-top: 15px;
+}
+
+.genres span {
+
+    padding: 9px 16px;
+
+    border: 1px solid #d9a4b7;
+
+    border-radius: 30px;
+
+    color: #914364;
+
+    background: #fdf1f5;
+
+    font-size: 12px;
+}
+
+
+/* =========================================
+   MOVIES SECTION
+   ========================================= */
+
+.movies-section {
+
+    padding: 110px 8%;
+
+    background: #fff8fa;
+
+    display: grid;
+
+    grid-template-columns: .75fr 1.25fr;
+
+    gap: 70px;
+}
+
+.movies-title {
+
+    position: sticky;
+
+    top: 100px;
+
+    align-self: start;
+}
+
+.movies-title h2 {
+
+    font-family: "Caveat", cursive;
+
+    font-size: 65px;
+
+    line-height: .85;
+
+    color: #743650;
+
+    margin-bottom: 25px;
+}
+
+.movies-title > p:last-child {
+
+    color: #795467;
+
+    font-size: 14px;
+
+    line-height: 1.8;
+
+    max-width: 350px;
+}
+
+
+/* MOVIE LIST */
+
+.movie-list {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 20px;
+}
+
+
+/* MOVIE CARD */
+
+.movie-card {
+
+    display: grid;
+
+    grid-template-columns: 65px 1fr 40px;
+
+    gap: 20px;
+
+    align-items: center;
+
+    padding: 30px;
+
+    background: #f9e9ee;
+
+    border-left: 5px solid #b45578;
+
+    transition: .3s;
+}
+
+.movie-card:hover {
+
+    transform: translateX(8px);
+
+    box-shadow:
+        0 15px 35px rgba(100,45,70,.10);
+}
+
+
+/* MOVIE NUMBER */
+
+.movie-number {
+
+    font-family: "Caveat", cursive;
+
+    font-size: 35px;
+
+    color: #ad5073;
+}
+
+
+/* MOVIE TYPE */
+
+.movie-type {
+
+    font-size: 9px;
+
+    letter-spacing: 2px;
+
+    color: #a45a77;
+}
+
+
+/* MOVIE TITLE */
+
+.movie-info h3 {
+
+    font-family: "Caveat", cursive;
+
+    font-size: 35px;
+
+    color: #743650;
+
+    margin: 5px 0 8px;
+}
+
+
+/* MOVIE DESCRIPTION */
+
+.movie-info p {
+
+    color: #795467;
+
+    font-size: 13px;
+
+    line-height: 1.7;
+}
+
+
+/* DOODLES */
+
+.movie-doodle {
+
+    font-family: "Caveat", cursive;
+
+    font-size: 35px;
+
+    color: #bd6384;
+}
+
+
+/* =========================================
+   MOVIE QUOTE
+   ========================================= */
+
+.movie-note-section {
+
+    padding: 100px 8%;
+
+    background: #eed3dc;
+
+    display: flex;
+
+    justify-content: center;
+}
+
+.movie-note {
+
+    width: 700px;
+
+    padding: 60px;
+
+    background: #fff8fa;
+
+    text-align: center;
+
+    position: relative;
+
+    transform: rotate(-1deg);
+
+    box-shadow:
+        0 20px 50px rgba(100,45,70,.12);
+}
+
+.big-quote {
+
+    position: absolute;
+
+    left: 30px;
+    top: 10px;
+
+    font-family: "Caveat", cursive;
+
+    font-size: 90px;
+
+    color: #d48ca5;
+}
+
+.movie-note p {
+
+    font-family: "Caveat", cursive;
+
+    font-size: 45px;
+
+    line-height: 1;
+
+    color: #8f3c60;
+}
+
+.note-signature {
+
+    display: block;
+
+    margin-top: 20px;
+
+    font-family: "Caveat", cursive;
+
+    font-size: 25px;
+
+    color: #a94469;
+}
+
+
+/* =========================================
+   RESPONSIVE
+   ========================================= */
+
+@media (max-width: 850px) {
+
+    .cards-container {
+
+        grid-template-columns: 1fr;
+
+        padding-left: 7%;
+        padding-right: 7%;
+    }
+
+    .hobby-intro {
+
+        grid-template-columns: 1fr;
+    }
+
+    .movies-section {
+
+        grid-template-columns: 1fr;
+
+        gap: 50px;
+    }
+
+    .movies-title {
+
+        position: static;
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    .page-header {
+
+        padding-left: 7%;
+        padding-right: 7%;
+    }
+
+    .page-header h1 {
+
+        font-size: 65px;
+    }
+
+    .skill-card {
+
+        min-height: 400px;
+
+        padding: 35px 25px;
+    }
+
+    .hobby-card,
+    .genre-card {
+
+        padding: 35px 25px;
+    }
+
+    .hobby-card h2,
+    .genre-card h2 {
+
+        font-size: 50px;
+    }
+
+    .movies-section {
+
+        padding-left: 7%;
+        padding-right: 7%;
+    }
+
+    .movies-title h2 {
+
+        font-size: 55px;
+    }
+
+    .movie-card {
+
+        grid-template-columns: 45px 1fr;
+
+        padding: 22px;
+    }
+
+    .movie-doodle {
+
+        display: none;
+    }
+
+    .movie-info h3 {
+
+        font-size: 30px;
+    }
+
+    .movie-note {
+
+        padding: 50px 25px;
+    }
+
+    .movie-note p {
+
+        font-size: 35px;
+    }
+
+}
